@@ -1,12 +1,12 @@
 import React,{Component} from 'react'
 import BookList from './components/BookList';
+import AddBook from './components/AddBook';
 import {
   ApolloClient,
   InMemoryCache,
-  ApolloProvider,
-  useQuery,
-  gql
+  ApolloProvider
 } from "@apollo/client";
+
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql',
@@ -20,6 +20,7 @@ class App extends Component {
     <div id="main">
       <h1>Sayed Learning List 23</h1>  
       <BookList/>  
+      <AddBook/>
     </div>
     </ApolloProvider>
   );
